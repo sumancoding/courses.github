@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Course from "./Course";
 
-function App() {
+const App = () => {
+  const course = {
+    name: "Superadvanced web and mobile programming",
+    parts: [
+      {
+        name: "Basics of React",
+        exercises: 8,
+        id: 1,
+      },
+      {
+        name: "Using props",
+        exercises: 10,
+        id: 2,
+      },
+      {
+        name: "Component states",
+        exercises: 12,
+        id: 3,
+      },
+    ],
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Course course={course} />
     </div>
   );
-}
+};
 
 export default App;
+
